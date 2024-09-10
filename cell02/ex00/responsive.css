@@ -1,0 +1,27 @@
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+td {
+    width: 50%;
+    height: 150px;
+    text-align: center;        
+    font-size: 18px;
+    color: white;
+    border: 1px solid black;
+}
+.box1 {
+    background-color: #3498db; 
+}
+.box2 {
+    background-color: #e74c3c; 
+}
+
+@media (max-width: 768px) {
+  td {
+      font-size: 14px;
+  }
+}
+

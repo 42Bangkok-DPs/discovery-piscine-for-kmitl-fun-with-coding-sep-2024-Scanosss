@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Size Navigation Bar</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+  }
+
+  .navbar{
+    background-color: black;
+    color: azure;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    position: fixed; /*fix nav bar*/
+    width: 100%;
+    .menu{
+         display: flex;
+         list-style: none; /* จุดไข่ปลา */
+
+         li {
+          margin-left: 2rem;
+          a {
+            color: aliceblue;
+            text-decoration: none;/* เส้นใต้ */
+          }
+         }
+    }
+
+  }
+
+  .logo{
+    color: rgb(171, 228, 199);
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  .banner{
+    background-color: teal;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;/*x*/
+    align-items: center; /*y*/
+
+  }
+  
+  .banner-info {
+    text-align: center;
+  }
+
+  .banner-info img{
+    width: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  .banner-info h1{
+    padding: 10px;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*ทำให้เป็น3แถวใช้grid*/
+    .cl1,.cl3{
+      background-color: orange;
+    }
+    h3{
+      background-color: rgb(255, 255, 255);
+      border-radius: 5%;
+      text-align: center;
+    }
+  }
+
+  main div{
+    padding: 20px;
+  }
+  main div p {
+    margin-top: 10px;
+  }
+  .cl11, .cl13 {
+    background-color: rgb(243, 195, 106);
+    border-radius: 10%;
+  }
+
+.dl { /*web pj*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px 10px;
+    border: 1px solid red ;
+    
+  }
+.cf { /*web pj*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px 10px;
+    border: 1px solid red ;
+    
+  
+}
+
+.cf :hover{
+  transform: translateY(-3px);
+  display: flex;
+}
+.dl :hover{
+  transform: translateY(-3px);
+}
+
+.t2{
+  background-color: black;
+  color: white;
+  border: 1px solid orange;
+}
+.chat {
+  padding: 10px;
+}
+
+
+  /*footer{
+    background-color: black;
+    color: azure;
+    padding: 20px;
+    text-align: center;
+  }*/
+
+  @media (max-width: 768px) {
+    td {
+        font-size: 14px;
+    }
+  }
+    </style>
+
+</head>
+<body>
+<!-- nav start -->
+    <div class="navbar">
+
+       <div class="logo">My Portfolio</div> 
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </div>
+<!-- nav end -->
+
+<!-- banner start -->
+<section class="banner">
+  <div class="banner-info">
+    <img src="https://cdn.discordapp.com/attachments/912211343350837265/1270253480866611265/Scano2.jpg?ex=66e27d3e&is=66e12bbe&hm=8e160b2ed24da4484c90770e338536946b84b6eab43dfea3c2ba3635e4447635&" alt="">
+    
+      <h1>Hi. I'm Nut</h1>
+      <p>Mr. Nayot Puttasimma is an IoT and Information Engineer King Mongkut s Institute of Technology Ladkrabang (KMITL) in Bangkok, Thailand.</p>
+    
+  </div>
+</section>
+<!-- banner end -->
+
+<!-- Main start -->
+<main>
+    <div class="cl1">
+        <h3>🌱My skill</h3>
+        <p>
+          <div class="cl11">
+            HTML <br>  /////////35%
+          <br>
+          CSS <br>/////////44%
+          <br>
+          JS <br> ////18%
+          <br>
+          Python <br> /////20%
+          </div>
+          
+          <br>
+          <br> <hr>
+          <div class="chat">
+            I'm currently studying on KMITL! <br> <br>
+            I'm currently learning HTML,CSS,JS, Python and other cool stuff! <br> <br>
+            I'm looking to collaborate on full stack web apps!
+          </div>
+
+        </p>
+    </div>
+    <div class="cl2">
+        <h3 class="t2">⚡Past work</h3>
+        <p>
+          Project Arduino (smart door lock)
+          <div class="dl">
+            <a href="https://leobest.my.canva.site/door-latch-byras-pi" target="_blank">
+            <img src="https://cdn.discordapp.com/attachments/1277916595355652098/1283442417906749481/image.png?ex=66e30265&is=66e1b0e5&hm=ddbb442567cff37e5b0ea6904f1577aad5a34b48a73c2c745cdb5e9a197d737f&" alt="" width="160" height="180">
+            </a>
+          </div>
+            <br><hr><br>
+          Project Chill flow (inspiration from lofi) <br> Role : UX/UI design 
+          <div class="cf">
+            <a href="https://www.youtube.com/watch?v=b5gl9DM-ejI" target="_blank">
+            <img src="https://cdn.discordapp.com/attachments/1036609264766156801/1283446497375027221/image.png?ex=66e30632&is=66e1b4b2&hm=a6de9e9f96921c7d32b5d4f8f1a0d4f83560359ac7745714c5b27736a995b705&" alt="" width="260" height="150">
+            </a>
+          </div>
+        </p>
+    </div>
+
+    <div class="cl3">
+        <h3>📫contact</h3>
+      <p>
+        <div class="cl13">
+        💼 Phone  <br>: 092-5566514 <br> <br>
+        📰 Gmail <br> : Gundanaiputtasimma@gmail.com  
+        </div>
+        
+      </p>
+    </div>
+</main>
+<!-- Main end -->
+
+<!-- footer start -->
+<!-- <footer>
+    <p>Copyright 2024.made by Nut</p>
+</footer> -->
+<!-- footer end -->
+
+
+</body>
+</html>

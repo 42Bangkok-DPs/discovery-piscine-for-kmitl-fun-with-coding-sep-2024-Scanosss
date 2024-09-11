@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balloon</title>
+  <style>
+    #balloon {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%; /* Makes it a circle */
+      transition: all 0.3s ease; /* Smooth transition for size and color changes */
+      position: relative;
+      margin: 50px auto; /* Center the balloon horizontally */
+    }
+  </style>
+</head>
+<body>
+  <div id="balloon"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const balloon = document.getElementById('balloon');
+      let size = 200;
+      let colors = ['red', 'green', 'blue'];
+      let colorIndex = 0;
+
+      balloon.addEventListener('click', () => {
+        if (size >= 420) {
+          // Explode and reset size and color
+          size = 200;
+          balloon.style.width = size + 'px';
+          balloon.style.height = size + 'px';
+          balloon.style.backgroundColor = 'red'; // Reset color to red
+          colorIndex = 0; // Reset color index to red
+        } else {
+          size += 10;
+          balloon.style.width = size + 'px';
+          balloon.style.height = size + 'px';
+          colorIndex = (colorIndex + 1) % colors.length;
+          balloon.style.backgroundColor = colors[colorIndex];
+        }
+      });
+
+      balloon.addEventListener('mouseleave', () => {
+        if (size > 200) {
+          size -= 5;
+          balloon.style.width = size + 'px';
+          balloon.style.height = size + 'px';
+          colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+          balloon.style.backgroundColor = colors[colorIndex];
+
+          // Reset size and color to initial state if it gets to the initial size
+          if (size === 200) {
+            balloon.style.backgroundColor = 'red'; // Ensure color is red
+            colorIndex = 0; // Ensure color index is reset to red
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

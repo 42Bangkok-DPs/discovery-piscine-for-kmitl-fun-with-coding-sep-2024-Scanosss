@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  background-image: url(https://th.bing.com/th/id/R.c946eb9701c652248ea180477e0a23d6?rik=1fP33YfYEQXXEQ&pid=ImgRaw&r=0);
+}
+/*/////////////////////////////////////////////////////////////////////////////*/
+.navbar{
+  background-color: black;
+  color: azure;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-image: url(https://th.bing.com/th/id/OIP.etxnm3Oxm9H4m2v-S1r_vQHaEK?w=297&h=180&c=7&r=0&o=5&pid=1.7);
+  position: fixed; /*fix nav bar*/
+  width: 100%;
+  border: black solid 2px;
+  font-weight: bold;
+  font-size: 18px;
+  .menu{
+       display: flex;
+       list-style: none; /* จุดไข่ปลา */
+
+       li {
+        margin-left: 2rem;
+        a {
+          color: aliceblue;
+          text-decoration: none;/* เส้นใต้ */
+          transition: color 0.3s ease;
+        }
+        a:hover {
+          color: #66cc99;
+        }
+       }
+  }
+
+}
+.logo{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 26px;
+  
+}
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*background*/
+.sign {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8bba97ad-76c0-4367-b694-9c9380f2656c/df8r26t-21e68e29-b974-44fd-96a4-d03a5475e50b.jpg/v1/fill/w_1280,h_1280,q_75,strp/minecraft_grass_block_texture_by_psddude_df8r26t-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzhiYmE5N2FkLTc2YzAtNDM2Ny1iNjk0LTljOTM4MGYyNjU2Y1wvZGY4cjI2dC0yMWU2OGUyOS1iOTc0LTQ0ZmQtOTZhNC1kMDNhNTQ3NWU1MGIuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.5EcLotbgsNR5MYn5b3k0xjW1JbWxk_12JvBOHOUrrAs);
+  background-color: #ffffff;
+  padding-top: 75px;
+  text-align: center;
+  color: black;
+  font-family: monospace;
+  font-size: 30px;
+
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+.banner{
+  /* background-image: url(https://wallpapercave.com/wp/wp7930285.jpg); */
+  background-color: rgba(17, 16, 15, 0.89);
+  color: white;
+  height: 800px;
+  justify-content: center;/*x*/
+  align-items: center; /*y*/
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*ทำให้เป็น3แถวใช้grid*/
+  gap: 2rem;
+  padding: 2rem 5%;
+  
+}
+/*lefttttttttt*/
+.banner-N {
+  text-align: center;
+  div{
+    padding-top: 10px;
+    border: #05522b solid 2px;
+    border-radius: 3%;
+    background-color: #000000;
+  }
+  h1{
+    padding: 10px;
+  }
+  p{
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+.banner-N img{
+  width: 300px;
+  height: 300px;
+  border: 5px solid white;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.banner-N img:hover{
+  border: 4px solid #ebd248;
+  transition: color 0.3 ease;
+  transform: translateY(-1.5px);
+}
+
+
+/*right*/
+.banner-J {
+  text-align: center;
+  div{
+    padding-top: 10px;
+    border: #05522b solid 2px;
+    border-radius: 3%;
+    background-color: #000000;
+  }
+  h1{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+  }
+  p{
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.banner-J img{
+  
+  width: 300px;
+  height: 300px;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  object-fit: cover;
+}
+.banner-J img:hover{
+  border: 4px solid #ebd248;
+  transition: color 0.3 ease;
+  transform: translateY(-1.5px);
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*flex browser*/
+@media (max-width: 768px) {
+  .navbar {
+      padding: 1rem;
+
+      .menu{
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          margin-left: 0;
+          margin-bottom: 0.5rem;
+        }
+      }
+      
+    }
+    main {
+      grid-template-columns: 1fr;
+    }
+
+}
+/*/////////////////////////////////////////////////////////////////////////////*/
